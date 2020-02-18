@@ -3,7 +3,16 @@
 		<title>MinniM's Blog</title>
 	</head>
 	<body>
-		<p>Hi,,,</p>
-		<p>minnim,,,,</p>
+		<div>
+			<h1>MinniM's Blog</h1>
+		</div>
+
+		{% for post in posts %}
+			<div>
+				<p>published: {{post.published_date}}<p[>
+				<h2><a herf="">{{post.title}}</a></h2>
+				<p>{{post.text|linebreaksbr}}</p>
+			</div>
+		{% endfor %}
 	</body>
 <html>
